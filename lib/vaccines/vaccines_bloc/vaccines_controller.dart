@@ -1,3 +1,5 @@
+import 'package:dartz/dartz.dart';
+import 'package:fhir/primitive_types/primitive_failures.dart';
 import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -143,7 +145,8 @@ class VaccinesController extends GetxController {
             ),
             patient: Reference(
                 reference: 'Patient/${state.value.patient.patient.id}'),
-            occurrenceDateTime: FhirDateTime(state.value.vaccineDate),
+            occurrenceDateTime:
+                FhirDateTime(state.value.vaccineDate.toIso8601String()),
           ));
           print(newVax.fold(
             (l) => l.toString(),
@@ -186,3 +189,10 @@ class VaccinesController extends GetxController {
     );
   }
 }
+
+String _hasMatch(String input) => input.length <= 10
+    ? input
+    : input[10] == ' ' ? input.replaceFirst(' ', 'T') : input;
+
+const _instantString =
+    r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))';
