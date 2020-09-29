@@ -20,7 +20,7 @@ class _$VaccinesEventTearOff {
   }
 
 // ignore: unused_element
-  EnterVaccine enterVaccine() {
+  EnterVaccine addNewVaccine() {
     return const EnterVaccine();
   }
 
@@ -53,7 +53,7 @@ mixin _$VaccinesEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
-    @required Result enterVaccine(),
+    @required Result addNewVaccine(),
     @required Result newVaccineType(String type),
     @required Result newVaccineName(String name),
     @required Result newVaccineDate(DateTime date),
@@ -61,7 +61,7 @@ mixin _$VaccinesEvent {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
-    Result enterVaccine(),
+    Result addNewVaccine(),
     Result newVaccineType(String type),
     Result newVaccineName(String name),
     Result newVaccineDate(DateTime date),
@@ -70,7 +70,7 @@ mixin _$VaccinesEvent {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
-    @required Result enterVaccine(EnterVaccine value),
+    @required Result addNewVaccine(EnterVaccine value),
     @required Result newVaccineType(NewVaccineType value),
     @required Result newVaccineName(NewVaccineName value),
     @required Result newVaccineDate(NewVaccineDate value),
@@ -78,7 +78,7 @@ mixin _$VaccinesEvent {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
-    Result enterVaccine(EnterVaccine value),
+    Result addNewVaccine(EnterVaccine value),
     Result newVaccineType(NewVaccineType value),
     Result newVaccineName(NewVaccineName value),
     Result newVaccineDate(NewVaccineDate value),
@@ -159,13 +159,13 @@ class _$EnterBirthdate implements EnterBirthdate {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
-    @required Result enterVaccine(),
+    @required Result addNewVaccine(),
     @required Result newVaccineType(String type),
     @required Result newVaccineName(String name),
     @required Result newVaccineDate(DateTime date),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -176,7 +176,7 @@ class _$EnterBirthdate implements EnterBirthdate {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
-    Result enterVaccine(),
+    Result addNewVaccine(),
     Result newVaccineType(String type),
     Result newVaccineName(String name),
     Result newVaccineDate(DateTime date),
@@ -193,13 +193,13 @@ class _$EnterBirthdate implements EnterBirthdate {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
-    @required Result enterVaccine(EnterVaccine value),
+    @required Result addNewVaccine(EnterVaccine value),
     @required Result newVaccineType(NewVaccineType value),
     @required Result newVaccineName(NewVaccineName value),
     @required Result newVaccineDate(NewVaccineDate value),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -210,7 +210,7 @@ class _$EnterBirthdate implements EnterBirthdate {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
-    Result enterVaccine(EnterVaccine value),
+    Result addNewVaccine(EnterVaccine value),
     Result newVaccineType(NewVaccineType value),
     Result newVaccineName(NewVaccineName value),
     Result newVaccineDate(NewVaccineDate value),
@@ -252,7 +252,7 @@ class _$EnterVaccine implements EnterVaccine {
 
   @override
   String toString() {
-    return 'VaccinesEvent.enterVaccine()';
+    return 'VaccinesEvent.addNewVaccine()';
   }
 
   @override
@@ -267,32 +267,32 @@ class _$EnterVaccine implements EnterVaccine {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
-    @required Result enterVaccine(),
+    @required Result addNewVaccine(),
     @required Result newVaccineType(String type),
     @required Result newVaccineName(String name),
     @required Result newVaccineDate(DateTime date),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
-    return enterVaccine();
+    return addNewVaccine();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
-    Result enterVaccine(),
+    Result addNewVaccine(),
     Result newVaccineType(String type),
     Result newVaccineName(String name),
     Result newVaccineDate(DateTime date),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (enterVaccine != null) {
-      return enterVaccine();
+    if (addNewVaccine != null) {
+      return addNewVaccine();
     }
     return orElse();
   }
@@ -301,32 +301,32 @@ class _$EnterVaccine implements EnterVaccine {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
-    @required Result enterVaccine(EnterVaccine value),
+    @required Result addNewVaccine(EnterVaccine value),
     @required Result newVaccineType(NewVaccineType value),
     @required Result newVaccineName(NewVaccineName value),
     @required Result newVaccineDate(NewVaccineDate value),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
-    return enterVaccine(this);
+    return addNewVaccine(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
-    Result enterVaccine(EnterVaccine value),
+    Result addNewVaccine(EnterVaccine value),
     Result newVaccineType(NewVaccineType value),
     Result newVaccineName(NewVaccineName value),
     Result newVaccineDate(NewVaccineDate value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (enterVaccine != null) {
-      return enterVaccine(this);
+    if (addNewVaccine != null) {
+      return addNewVaccine(this);
     }
     return orElse();
   }
@@ -394,13 +394,13 @@ class _$NewVaccineType implements NewVaccineType {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
-    @required Result enterVaccine(),
+    @required Result addNewVaccine(),
     @required Result newVaccineType(String type),
     @required Result newVaccineName(String name),
     @required Result newVaccineDate(DateTime date),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -411,7 +411,7 @@ class _$NewVaccineType implements NewVaccineType {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
-    Result enterVaccine(),
+    Result addNewVaccine(),
     Result newVaccineType(String type),
     Result newVaccineName(String name),
     Result newVaccineDate(DateTime date),
@@ -428,13 +428,13 @@ class _$NewVaccineType implements NewVaccineType {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
-    @required Result enterVaccine(EnterVaccine value),
+    @required Result addNewVaccine(EnterVaccine value),
     @required Result newVaccineType(NewVaccineType value),
     @required Result newVaccineName(NewVaccineName value),
     @required Result newVaccineDate(NewVaccineDate value),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -445,7 +445,7 @@ class _$NewVaccineType implements NewVaccineType {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
-    Result enterVaccine(EnterVaccine value),
+    Result addNewVaccine(EnterVaccine value),
     Result newVaccineType(NewVaccineType value),
     Result newVaccineName(NewVaccineName value),
     Result newVaccineDate(NewVaccineDate value),
@@ -524,13 +524,13 @@ class _$NewVaccineName implements NewVaccineName {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
-    @required Result enterVaccine(),
+    @required Result addNewVaccine(),
     @required Result newVaccineType(String type),
     @required Result newVaccineName(String name),
     @required Result newVaccineDate(DateTime date),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -541,7 +541,7 @@ class _$NewVaccineName implements NewVaccineName {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
-    Result enterVaccine(),
+    Result addNewVaccine(),
     Result newVaccineType(String type),
     Result newVaccineName(String name),
     Result newVaccineDate(DateTime date),
@@ -558,13 +558,13 @@ class _$NewVaccineName implements NewVaccineName {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
-    @required Result enterVaccine(EnterVaccine value),
+    @required Result addNewVaccine(EnterVaccine value),
     @required Result newVaccineType(NewVaccineType value),
     @required Result newVaccineName(NewVaccineName value),
     @required Result newVaccineDate(NewVaccineDate value),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -575,7 +575,7 @@ class _$NewVaccineName implements NewVaccineName {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
-    Result enterVaccine(EnterVaccine value),
+    Result addNewVaccine(EnterVaccine value),
     Result newVaccineType(NewVaccineType value),
     Result newVaccineName(NewVaccineName value),
     Result newVaccineDate(NewVaccineDate value),
@@ -654,13 +654,13 @@ class _$NewVaccineDate implements NewVaccineDate {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result enterBirthdate(DateTime birth),
-    @required Result enterVaccine(),
+    @required Result addNewVaccine(),
     @required Result newVaccineType(String type),
     @required Result newVaccineName(String name),
     @required Result newVaccineDate(DateTime date),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -671,7 +671,7 @@ class _$NewVaccineDate implements NewVaccineDate {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result enterBirthdate(DateTime birth),
-    Result enterVaccine(),
+    Result addNewVaccine(),
     Result newVaccineType(String type),
     Result newVaccineName(String name),
     Result newVaccineDate(DateTime date),
@@ -688,13 +688,13 @@ class _$NewVaccineDate implements NewVaccineDate {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result enterBirthdate(EnterBirthdate value),
-    @required Result enterVaccine(EnterVaccine value),
+    @required Result addNewVaccine(EnterVaccine value),
     @required Result newVaccineType(NewVaccineType value),
     @required Result newVaccineName(NewVaccineName value),
     @required Result newVaccineDate(NewVaccineDate value),
   }) {
     assert(enterBirthdate != null);
-    assert(enterVaccine != null);
+    assert(addNewVaccine != null);
     assert(newVaccineType != null);
     assert(newVaccineName != null);
     assert(newVaccineDate != null);
@@ -705,7 +705,7 @@ class _$NewVaccineDate implements NewVaccineDate {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result enterBirthdate(EnterBirthdate value),
-    Result enterVaccine(EnterVaccine value),
+    Result addNewVaccine(EnterVaccine value),
     Result newVaccineType(NewVaccineType value),
     Result newVaccineName(NewVaccineName value),
     Result newVaccineDate(NewVaccineDate value),

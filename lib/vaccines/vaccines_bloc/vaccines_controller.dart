@@ -2,6 +2,7 @@ import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
+import 'package:vigor/interfaces/i_fhir_db.dart';
 import 'package:vigor/models/patient_model.dart';
 
 import '../../formatters.dart';
@@ -121,7 +122,37 @@ class VaccinesController extends GetxController {
         final curPatient = oldPatient.copyWith(birthDate: Date(event.birth));
         await _getVaccineInfo(PatientModel(patient: curPatient));
       },
-      enterVaccine: (event) => null,
+      addNewVaccine: (event) async {
+        if (state.value.vaccineType == 'Enter Vaccine Type' &&
+            state.value.vaccineName == 'Enter Vaccine Name') {
+        } else {
+          final newVax = await IFhirDb().save(Immunization(
+            resourceType: 'Immunization',
+            status: Code('complete'),
+            vaccineCode: CodeableConcept(
+              coding: [
+                Coding(
+                  system: FhirUri('http://hl7.org/fhir/sid/cvx'),
+                  code: Code(
+                    state.value.vaccineType != null
+                        ? stringToCvx[state.value.vaccineType]
+                        : tradeNameToCvx[state.value.vaccineType],
+                  ),
+                ),
+              ],
+            ),
+            patient: Reference(
+                reference: 'Patient/${state.value.patient.patient.id}'),
+            occurrenceDateTime: FhirDateTime(state.value.vaccineDate),
+          ));
+          print(newVax.fold(
+            (l) => l.toString(),
+            (r) => r.toJson(),
+          ));
+          await _getVaccineInfo(state.value.patient);
+        }
+        update();
+      },
       newVaccineType: (event) {
         state.value = VaccinesState.vaccineEntry(
           patient: state.value.patient,

@@ -85,6 +85,7 @@ class Vaccines extends StatelessWidget {
               FlatButton(
                 child: const Text('Record Vaccine'),
                 onPressed: () {
+                  controller.event(const VaccinesEvent.addNewVaccine());
                   Navigator.of(context).pop();
                 },
               )
