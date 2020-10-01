@@ -327,8 +327,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: HEAD
-      resolved-ref: f8adad3dcf129ee9de7363dbafc1f023003c22df
+      ref: security
+      resolved-ref: "7a273c7df03f697f5261f1f2b19695076b0ac396"
       url: "git://github.com/Dokotela/fhir_db.git"
     source: git
     version: "0.0.1"

@@ -30,6 +30,7 @@ dependencies:
   fhir_db:
     git:
       url: git://github.com/Dokotela/fhir_db.git
+      ref: security
 
 
 dev_dependencies:
